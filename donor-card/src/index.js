@@ -10,5 +10,4 @@ function fetchDonors(){
   .then(donorArray => {
     console.log(donorArray)
     })
-  })
-}
+  }
