@@ -1,6 +1,7 @@
 // loading these functions as the page loads
 document.addEventListener("DOMContentLoaded", () => {
   fetchDonors();
+  renderBar();
 })
 
 // fetching donor info from JSON file
@@ -13,6 +14,14 @@ function fetchDonors(){
   }
 
 function renderBar(){
+
+  let card = document.querySelector("#card");
+
   let donorMeter = document.createElement("div");
-  toyCard.classList.add("card")
+  donorMeter.classList.add("meter")
+
+  card.append(donorMeter)
+
+  let cardContainer = document.querySelector("#container")
+  cardContainer.appendChild(donorMeter)
 }

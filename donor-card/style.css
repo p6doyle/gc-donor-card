@@ -3,17 +3,17 @@ body {
   color: #555555;
 }
 
-.card {
+#card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   /* transition: 0.3s; */
   max-width: 25vw;
 }
 
-.container {
+#container {
   padding: 2px 16px;
 }
 
-.meter {
+#meter {
 	height: 20px;  /* Can be anything */
 	position: relative;
 	background: #555;
@@ -21,7 +21,7 @@ body {
 	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
 }
 
-.meter > span {
+#meter > span {
   display: block;
   height: 100%;
   background-color: rgb(43,194,83);
