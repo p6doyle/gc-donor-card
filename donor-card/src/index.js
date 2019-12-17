@@ -19,6 +19,7 @@ function renderBar(){
 
   let donorMeter = document.createElement("div");
   donorMeter.classList.add("meter")
+  donorMeter.innerHTML = "<span style='width: 85%'></span>";
 
   card.append(donorMeter)
 
