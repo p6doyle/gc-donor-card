@@ -11,3 +11,8 @@ function fetchDonors(){
     console.log(donorArray)
     })
   }
+
+function renderBar(){
+  let donorMeter = document.createElement("div");
+  toyCard.classList.add("card")
+}
