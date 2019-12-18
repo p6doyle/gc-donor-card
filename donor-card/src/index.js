@@ -10,11 +10,13 @@ function fetchDonors(){
   .then(response => response.json())
   .then(donorArray => {
     console.log(donorArray)
-    })
+    donorArray.forEach(donorObj => {
+      renderDonors(donorObj)
+    })})
   }
 
-function renderBar(donorObj){
-
+// rendering donation bar on load
+function renderBar(){
   let card = document.querySelector("#card-front");
 
   let donorMeter = document.createElement("div");
@@ -27,7 +29,17 @@ function renderBar(donorObj){
   cardContainer.appendChild(donorMeter)
 }
 
-function myFunction() {
+function renderDonors(donorObj){
+  let card = document.querySelector("#card-back");
+  let donorList = document.createElement("ol");
+  let donorName = document.createElement("li")
+  donorName.innerText = `${donorObj.name}`
+  card.append(donorName)
+  let cardContainer = document.querySelector("#container-back")
+  cardContainer.appendChild(donorList)
+}
+
+function flipCard() {
   var x = document.getElementById("card-front");
   var y = document.getElementById("card-back");
   y.style.display = "none";
