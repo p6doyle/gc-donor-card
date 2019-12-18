@@ -46,7 +46,6 @@ p.donationpercent, p.numofdonors {
 /* general card styling */
 #card-front {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  /* transition: 0.3s; */
   max-width: 25vw;
   height: 41vw;
   text-align: center;
@@ -54,13 +53,14 @@ p.donationpercent, p.numofdonors {
 
 #card-back {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  /* transition: 0.3s; */
   max-width: 25vw;
   max-height: 41vw;
   text-align: center;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
 #container-front {
   padding: 2px 16px;
@@ -123,14 +123,17 @@ p.donationpercent, p.numofdonors {
   font-weight: 100;
 }
 
-#donors tr:nth-child(even){background-color: #ffffff;}
+#donors tr:nth-child(even) {
+  background-color: #ffffff;
+}
 
-#donors tr:hover {background-color: #ddd;}
+#donors tr:hover {
+  background-color: #ddd;
+}
 
 #donors th {
   padding-top: 12px;
   padding-bottom: 12px;
-  /* text-align: left; */
   background-color: #ffffff;
   color: #555555;
 }
