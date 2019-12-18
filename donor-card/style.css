@@ -4,11 +4,13 @@ body {
 }
 
 #card {
-
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* transition: 0.3s; */
+  max-width: 25vw;
 }
 
 #container {
-
+  padding: 2px 16px;
 }
 
 .meter {
@@ -54,69 +56,70 @@ p {
   line-height: 1.7vw;
 }
 
-
-/* entire container, keeps perspective */
-.flip-container{
-/*perspective*/
--webkit-perspective:1000;
-   -moz-perspective:1000;
-    -ms-perspective:1000;
-     -o-perspective:1000;
-        perspective:1000;
-}
-/* flip the pane when hovered */
-	.flipped {
-/*transform*/
--webkit-transform:rotateY(180deg);
-   -moz-transform:rotateY(180deg);
-    -ms-transform:rotateY(180deg);
-     -o-transform:rotateY(180deg);
-        transform:rotateY(180deg);
-}
-.flip-container, .front, .back{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  /* transition: 0.3s; */
-  width: 25vw;
+label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
-.front {
-  margin: 2px 16px;
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
 }
 
-.flipper {
-/*transition*/
--webkit-transition:0.6s;
-   -moz-transition:0.6s;
-     -o-transition:0.6s;
-        transition:0.6s;
--webkit-transform-style:preserve-3d;
-   -moz-transform-style:preserve-3d;
-    -ms-transform-style:preserve-3d;
-     -o-transform-style:preserve-3d;
-        transform-style:preserve-3d;
-}
-/* hide back of pane during swap */
-.front, .back{
-/*backface-visibility*/
--webkit-backface-visibility:hidden;
-   -moz-backface-visibility:hidden;
-    -ms-backface-visibility:hidden;
-     -o-backface-visibility:hidden;
-        backface-visibility:hidden;
-position:absolute;
+    .card div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        text-align: center;
+        line-height: 200px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
 
+    .card .back {
+        background: #222;
+        color: #FFF;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+
+label:hover .card {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
 }
-/* front pane, placed above back */
-.front{
-z-index:2;
+
+input {
+    display: none;
 }
-/* back, initially hidden pane */
-.back{
-/*transform*/
--webkit-transform:rotateY(180deg);
-   -moz-transform:rotateY(180deg);
-    -ms-transform:rotateY(180deg);
-     -o-transform:rotateY(180deg);
-        transform:rotateY(180deg);
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(255,255,255,.2);
 }
 

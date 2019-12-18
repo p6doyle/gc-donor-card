@@ -28,4 +28,3 @@ function renderBar(donorObj){
 }
 
 
-
