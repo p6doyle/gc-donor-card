@@ -1,12 +1,17 @@
 body {
-  font-family: Verdana, Geneva, sans-serif;
   color: #555555;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Text styling */
 h2 {
   color: #8651A5;
   font-size: 1.5vw;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 h3 {
@@ -22,9 +27,14 @@ h4 {
 
 p {
   color: #777777;
-  font-size: 0.9vw;
-  line-height: 1.5vw;
+  font-size: 1.2vw;
+  line-height: 1.7vw;
   text-align: left;
+  font-weight: 200;
+}
+
+.centered-table {
+  text-align: center;
 }
 
 /* general card styling */
@@ -74,22 +84,23 @@ p {
   overflow: hidden;
 }
 
-.alignleft {
+.donationpercent {
 	float: left;
 }
 
-.alignright {
+.numofdonors {
 	float: right;
 }
 
 /* back of card styling */
 #donors {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-family: acumin-pro, sans-serif;
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1vw;
   text-align: left;
   font-weight: normal;
+  line-height: 1.2vw;
 }
 
 #donors td, #donors tr {
@@ -106,18 +117,19 @@ p {
 #donors th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  /* text-align: left; */
   background-color: #ffffff;
   color: #555555;
 }
 
 #giftbutton {
-  width: 10vw;
+  width: 12vw;
   height: 2vw;
   border-radius: 1vw;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: acumin-pro, sans-serif;
   color: #ffffff;
   font-size: 1vw;
+  margin-top: 2vh;
   background-color: #8651A5;
 }
 

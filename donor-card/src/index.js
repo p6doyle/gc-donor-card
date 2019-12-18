@@ -16,8 +16,9 @@ function fetchDonors(){
       let cell1 = row.insertCell();
       let text1= cell1.appendChild(document.createTextNode(donor.name));
       let cell2 = row.insertCell();
-      let text2= cell2.appendChild(document.createTextNode(donor.amount));
+      let text2= cell2.appendChild(document.createTextNode("$" + donor.amount));
       let cell3 = row.insertCell();
+      cell3.classList.add("centered-table")
       let text3= cell3.appendChild(document.createTextNode(donor.type));
       tblBody.appendChild(row);
     });
@@ -71,6 +72,12 @@ function renderFigures(donorArray) {
   backtotals.appendChild(backtotal)
 
   // adding figures to front of card near meter
+  let decpercent = total / 25000
+  let percent = decpercent * 100
+  let donationpercent = document.querySelector(".donationpercent");
+  let donationpercenttext = donationpercent.innerHTML = Math.round(`${percent}`) + "%"
+
+  let numofdonors = document.querySelector(".numofdonors");
 
 
 
