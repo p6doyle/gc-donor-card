@@ -37,6 +37,10 @@ p {
   text-align: center;
 }
 
+p.donationpercent, p.numofdonors {
+  font-weight: 800;
+}
+
 /* general card styling */
 #card-front {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

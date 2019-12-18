@@ -78,6 +78,9 @@ function renderFigures(donorArray) {
   let donationpercenttext = donationpercent.innerHTML = Math.round(`${percent}`) + "%"
 
   let numofdonors = document.querySelector(".numofdonors");
+  let numofdonorstext = numofdonors.innerHTML = `${donorArray.length}` + " Donors"
+
+
 
 
 
