@@ -27,4 +27,16 @@ function renderBar(donorObj){
   cardContainer.appendChild(donorMeter)
 }
 
+function myFunction() {
+  var x = document.getElementById("card-front");
+  var y = document.getElementById("card-back");
+  y.classList.remove("hidden");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
 
