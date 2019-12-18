@@ -27,7 +27,5 @@ function renderBar(donorObj){
   cardContainer.appendChild(donorMeter)
 }
 
-var card = document.querySelector('scard');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
+
+
