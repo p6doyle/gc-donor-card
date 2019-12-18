@@ -1,10 +1,9 @@
 // loading these functions as the page loads
 document.addEventListener("DOMContentLoaded", () => {
   fetchDonors();
-  renderBar();
 })
 
-// fetching donor info from JSON file
+// fetching donor info from JSON file & building table on back of card
 function fetchDonors(){
   fetch("http://localhost:3000/donors")
   .then(response => response.json())
@@ -28,14 +27,16 @@ function fetchDonors(){
       }
     )}
 
-
 // rendering donation bar on load
-function renderBar(){
+function renderBar(total){
+  let decpercent = total / 25000
+  let percent = decpercent * 100
+  console.log(percent)
   let card = document.querySelector("#card-front");
 
   let donorMeter = document.createElement("div");
   donorMeter.classList.add("meter")
-  donorMeter.innerHTML = "<span style='width: 85%'></span>";
+  donorMeter.innerHTML = `<span style='width: ${percent}%'></span>`;
 
   card.append(donorMeter)
 
@@ -43,6 +44,7 @@ function renderBar(){
   cardContainer.appendChild(donorMeter)
 }
 
+// function to flip card on click
 function flipCard() {
   var x = document.getElementById("card-front");
   var y = document.getElementById("card-back");
@@ -57,11 +59,13 @@ function flipCard() {
   }
 }
 
+// adding misc. figures, totals and numbers to card
 function renderFigures(donorArray) {
   let total = donorArray.reduce((total, obj) => obj.amount + total,0)
+  renderBar(total);
   console.log(total)
   let backtotals = document.querySelector("#backtotal");
-  let backtotal = document.createElement("h2");
+  let backtotal = document.createElement("h4");
   backtotal.innerHTML = "$" + total
   backtotals.appendChild(backtotal)
 
