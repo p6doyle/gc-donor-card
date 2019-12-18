@@ -12,10 +12,13 @@ function fetchDonors(){
     let tbl = document.getElementById("donors");
     let tblBody = document.createElement("tbody");
     donorArray.forEach(donor => {
-      let row = document.createElement("tr");
-      row.appendChild(document.createTextNode(donor.name));
-      row.appendChild(document.createTextNode(donor.amount));
-      row.appendChild(document.createTextNode(donor.type));
+      let row = tbl.insertRow();
+      let cell1 = row.insertCell();
+      let text1= cell1.appendChild(document.createTextNode(donor.name));
+      let cell2 = row.insertCell();
+      let text2= cell2.appendChild(document.createTextNode(donor.amount));
+      let cell3 = row.insertCell();
+      let text3= cell3.appendChild(document.createTextNode(donor.type));
       tblBody.appendChild(row);
     });
 
@@ -23,6 +26,7 @@ function fetchDonors(){
 
       }
     )}
+
 
 // rendering donation bar on load
 function renderBar(){
