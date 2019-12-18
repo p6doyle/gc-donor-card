@@ -34,7 +34,7 @@ function renderBar(total){
   console.log(percent)
   let card = document.querySelector("#card-front");
 
-  let donorMeter = document.createElement("div");
+  let donorMeter = document.querySelector("#donormeter");
   donorMeter.classList.add("meter")
   donorMeter.innerHTML = `<span style='width: ${percent}%'></span>`;
 
@@ -61,6 +61,7 @@ function flipCard() {
 
 // adding misc. figures, totals and numbers to card
 function renderFigures(donorArray) {
+  // adding total to back of card
   let total = donorArray.reduce((total, obj) => obj.amount + total,0)
   renderBar(total);
   console.log(total)
@@ -68,6 +69,9 @@ function renderFigures(donorArray) {
   let backtotal = document.createElement("h4");
   backtotal.innerHTML = "$" + total
   backtotals.appendChild(backtotal)
+
+  // adding figures to front of card near meter
+
 
 
 }
