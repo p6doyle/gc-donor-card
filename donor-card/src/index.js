@@ -92,11 +92,6 @@ function renderFigures(donorArray) {
 
   var donorMeter = document.querySelector('#donormeter');
   donorMeter.after(status, totaldonations);
-
-
-
-
-
 }
 
 
