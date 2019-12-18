@@ -10,7 +10,7 @@
 <body class="body">
   <script type="application/javascript" src="src/index.js" charset="utf-8"></script>
 
-  <div id="card-front">
+  <div id="card-front" onclick="flipCard()">
     <img src="assets/holy-cross.jpeg" alt="Avatar" style="width:100%">
     <div id="container-front">
       <h2><b>Class of 2017 Challenge</b></h2>
@@ -18,25 +18,27 @@
       <p>$25,000 is on the line. Please make a gift today to honor Dean Paco and help 2017 reach 60%!</p>
 
     </div>
-    <button class="flipbutton" onclick="flipCard()">View Donors</button>
   </div>
 
-  <div id="card-back" class="hidden">
+  <div id="card-back" class="hidden" onclick="flipCard()">
     <div id="container-back">
       <h2><b>Class of 2017 Challenge</b></h2>
       <h3>Top 10 Donors</h3>
 
-      <table id="donors">
-      <tr>
-        <th>Donor</th>
-        <th>Dollars</th>
-        <th>Type</th>
-      </tr>
-
+      <div id="donortable">
+        <table id="donors">
+        <tr>
+          <th>Donor</th>
+          <th>Dollars</th>
+          <th>Type</th>
+        </tr>
+        </table>
+        <button>Gift</button>
+        <div id="backtotal"></div>
       </div>
+    </div>
 
 
-      <button class="flipbutton" onclick="flipCard()">View Progress</button>
     </div>
   </div>
 

@@ -7,7 +7,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   /* transition: 0.3s; */
   max-width: 25vw;
-  height: 80vh;
+  height: 85vh;
   text-align: center;
 }
 
@@ -15,7 +15,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   /* transition: 0.3s; */
   max-width: 25vw;
-  height: 80vh;
+  height: 85vh;
   text-align: center;
 }
 
@@ -79,6 +79,7 @@ p {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 1vw;
 }
 
 #donors td, #donors th {
