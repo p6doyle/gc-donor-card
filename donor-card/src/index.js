@@ -64,6 +64,8 @@ function flipCard() {
 function renderFigures(donorArray) {
   // adding total to back of card
   let total = donorArray.reduce((total, obj) => obj.amount + total,0)
+  let roundedtotal = Math.round(total)
+  let moneytotal = Number(roundedtotal).toLocaleString('en');
   renderBar(total);
   console.log(total)
   let backtotals = document.querySelector("#backtotal");
@@ -79,6 +81,17 @@ function renderFigures(donorArray) {
 
   let numofdonors = document.querySelector(".numofdonors");
   let numofdonorstext = numofdonors.innerHTML = `${donorArray.length}` + " Donors"
+
+  var status = document.createElement('p');
+  status.innerHTML = "Active"
+  status.classList.add("status")
+
+  var totaldonations = document.createElement('p');
+  totaldonations.innerHTML = `<b>$${moneytotal}</b>` + " Donated"
+  totaldonations.classList.add("totaldonations")
+
+  var donorMeter = document.querySelector('#donormeter');
+  donorMeter.after(status, totaldonations);
 
 
 
