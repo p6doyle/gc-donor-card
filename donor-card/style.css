@@ -55,3 +55,10 @@ p {
   font-size: 1vw;
   line-height: 1.7vw;
 }
+
+#card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}

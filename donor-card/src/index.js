@@ -13,7 +13,7 @@ function fetchDonors(){
     })
   }
 
-function renderBar(){
+function renderBar(donorObj){
 
   let card = document.querySelector("#card");
 
@@ -25,4 +25,9 @@ function renderBar(){
 
   let cardContainer = document.querySelector("#container")
   cardContainer.appendChild(donorMeter)
+}
+
+function flip() {
+    let card = document.querySelector("#card");
+    card.toggleClass('flipped');
 }
