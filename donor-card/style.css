@@ -7,18 +7,28 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   /* transition: 0.3s; */
   max-width: 25vw;
+  height: 75vh;
+  text-align: center;
 }
 
 #card-back {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   /* transition: 0.3s; */
   max-width: 25vw;
+  height: 75vh;
+  text-align: center;
 }
 
 .hidden { display: none; }
 
-#container {
+#container-front {
   padding: 2px 16px;
+  text-align: left;
+}
+
+#container-back {
+  padding: 2px 16px;
+  text-align: center;
 }
 
 .meter {
@@ -62,6 +72,7 @@ p {
   color: #777777;
   font-size: 1vw;
   line-height: 1.7vw;
+  text-align: left;
 }
 
 #myDIV {

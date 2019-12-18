@@ -15,7 +15,7 @@ function fetchDonors(){
 
 function renderBar(donorObj){
 
-  let card = document.querySelector("#card");
+  let card = document.querySelector("#card-front");
 
   let donorMeter = document.createElement("div");
   donorMeter.classList.add("meter")
@@ -23,17 +23,20 @@ function renderBar(donorObj){
 
   card.append(donorMeter)
 
-  let cardContainer = document.querySelector("#container")
+  let cardContainer = document.querySelector("#container-front")
   cardContainer.appendChild(donorMeter)
 }
 
 function myFunction() {
   var x = document.getElementById("card-front");
   var y = document.getElementById("card-back");
-  y.classList.remove("hidden");
+  y.style.display = "none";
+
   if (x.style.display === "none") {
     x.style.display = "block";
+    y.style.display = "none";
   } else {
+    y.style.display = "block";
     x.style.display = "none";
   }
 }
