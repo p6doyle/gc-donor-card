@@ -1,0 +1,9 @@
+{"payments": [
+  {"date": "1/31/20", "amount": 350.00},
+  {"date": "2/12/20", "amount": 400.00},
+  {"date": "2/20/20", "amount": 300.00},
+  {"date": "3/7/20", "amount": 400.00},
+  {"date": "3/10/20", "amount": 100.00, "notes": "Mom pocketed because she made a loan payment"},
+  {"date": "3/26/20", "amount": 100.00}
+]
+}
